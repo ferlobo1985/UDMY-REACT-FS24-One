@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM  from 'react-dom/client';
+import Header from './components/header';
+import NewsList from './components/news_list';
 
 const App = () => {
     return (
         <>
-            <h1>Hello world</h1>
-            <h1>Hello world</h1>
+            <Header/>
+            <NewsList/>
         </>
     )
 }

@@ -1,9 +1,11 @@
+import { useState } from 'react'
 import Navigation from './nav';
 
 const Header = () => {
+    let [keywords,setKeywords] = useState('');
 
     const onChangeHandler = (event) => {
-        console.log(event.target.value);
+        setKeywords(event.target.value);
     }
 
     return(
@@ -14,6 +16,7 @@ const Header = () => {
             <input
                 onChange={onChangeHandler}
             />
+            {/* The keywords are: {keywords} */}
             <Navigation/>
         </header>
     )

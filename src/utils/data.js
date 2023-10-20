@@ -1,4 +1,3 @@
-
 export const navItems = [
     {id:"1",link:"/articles",title:"Articles"},
     {id:"2",link:"/sports",title:"Sports"},

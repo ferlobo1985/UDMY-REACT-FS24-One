@@ -2,14 +2,17 @@ import { useState } from 'react'
 import Navigation from './nav';
 
 const Header = () => {
+    let [active, setActive] = useState('active')
     let [keywords,setKeywords] = useState('');
 
     const onChangeHandler = (event) => {
+        const value = event.target.value === '' ? 'active' : 'not-active';
         setKeywords(event.target.value);
+        setActive(value)
     }
 
     return(
-        <header>
+        <header className={active}>
             <div 
                 className="logo"
             >Awesome News</div>

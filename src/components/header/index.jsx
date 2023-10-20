@@ -1,15 +1,16 @@
 import { useState } from 'react'
 import Navigation from './nav';
 
-const Header = () => {
+const Header = (props) => {
     let [active, setActive] = useState('active')
     let [keywords,setKeywords] = useState('');
 
-    const onChangeHandler = (event) => {
-        const value = event.target.value === '' ? 'active' : 'not-active';
-        setKeywords(event.target.value);
-        setActive(value)
-    }
+    // const onChangeHandler = (event) => {
+    //     const value = event.target.value === '' ? 'active' : 'not-active';
+    //     // setKeywords(event.target.value);
+    //     setActive(value)
+    // }
+
 
     return(
         <header className={active}>
@@ -17,7 +18,7 @@ const Header = () => {
                 className="logo"
             >Awesome News</div>
             <input
-                onChange={onChangeHandler}
+                onChange={props.getKeywords}
             />
             {/* The keywords are: {keywords} */}
             <Navigation/>
